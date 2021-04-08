@@ -1,0 +1,61 @@
+/* Exo 1 gauche droite */
+#exo1{
+    max-width: max-content;
+    position: relative;
+}
+section:first-child>h1::before{
+    content: "";
+    bottom: 0;
+    position: absolute;
+    background-color: red;
+    height: 1px;
+    width: 0%;
+    transition: 5s;
+}
+section:first-child>h1:hover::before{
+    width: 100%;
+}
+/* fin Exo 1 */
+
+/* Exo 2 milieu exterieur*/
+#exo2{
+    max-width: max-content;
+    position: relative;
+}
+section:nth-child(2)>h1::before{
+    content: "";
+    bottom: 0;
+    position: absolute;
+    background-color: red;
+    height: 1px;
+    width: 0;
+    transition: 5s;
+    left: 50%;
+}
+section:nth-child(2)>h1:hover::before{
+    width: 100%;
+    left: 0%;
+}
+/* fin Exo 2 */
+
+/* Exo 3 bg bas haut */
+#exo3{
+    max-width: max-content;
+    position: relative;
+}
+#exo3>h1::before{
+    content: ""; 
+    width: 100%; /*commence sur toute la largeur du bas*/
+    height: 0; /*met la hauteur a 0*/
+    bottom: 0;/*met la bas a 0*/
+    position: absolute;/**/
+    background-color: red;/**/
+    transition: 5s;/*la duréé sera de 5seconde*/
+    z-index: -1;/*fait passer le bg derriere la phrase*/
+
+}
+#exo3>h1:hover::before{
+    width: 100%;
+    height: 100%;
+}
+/* fin Exo 3 */
